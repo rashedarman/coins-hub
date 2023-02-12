@@ -1,0 +1,11 @@
+### * Coins prices
+GET https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=USD
+
+### * Coin prices
+GET https://api.coinstats.app/public/v1/coins/bitcoin?currency=USD
+
+### * Coin price history chart
+GET https://api.coinstats.app/public/v1/charts?period=24h&coinId=bitcoin
+
+### * Get News by filter
+GET https://api.coinstats.app/public/v1/news/trending?limit=20
