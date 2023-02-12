@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint:js": "eslint \"./src/**/*.{ts,tsx}\""
+    "lint:js": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:css": "stylelint \"./src/**/*.{css,scss}\""
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "4.x",
+    "sass": "^1.58.0",
     "stylelint": "13.x",
     "stylelint-config-standard": "21.x",
     "stylelint-csstree-validator": "1.x",
