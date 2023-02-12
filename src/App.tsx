@@ -1,9 +1,9 @@
-import './App.scss';
+import { Title } from '@mantine/core';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
+      <Title order={1}>Hello World</Title>
     </div>
   );
 }
