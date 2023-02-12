@@ -1,9 +1,12 @@
-import { Title } from '@mantine/core';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Title order={1}>Hello World</Title>
+      <Routes>
+        <Route index element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
