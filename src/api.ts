@@ -31,7 +31,7 @@ const api = axios.create({
   },
 });
 
-export const getCoins = async (params: GetCoinsParams) => {
+export const getCoins = async (params: GetCoinsParams = {}) => {
   const { currency = 'USD', limit = 20 } = params;
   const response = await api.get<Coins>(
     `coins?currency=${currency}&limit=${limit}`,
