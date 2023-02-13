@@ -1,4 +1,28 @@
 import axios from 'axios';
+import {
+  ChartData, Coin, Coins, News,
+} from './interfaces';
+import { NewsFilter, Period } from './types';
+
+interface GetCoinsParams {
+  limit?: number;
+  currency?: string;
+}
+
+interface GetNewsParams {
+  filter: NewsFilter;
+  limit?: number;
+}
+
+interface GetCoinParams {
+  coinId: string;
+  currency?: string;
+}
+
+interface GetChartParams {
+  coinId: string;
+  period?: Period;
+}
 
 const api = axios.create({
   baseURL: 'https://api.coinstats.app/public/v1/',
@@ -7,31 +31,31 @@ const api = axios.create({
   },
 });
 
-export type Period = '24h' | '1w' | '1m' | '3m' | '6m' | '1y' | 'all';
-export type NewsFilter =
-  | 'handpicked'
-  | 'trending'
-  | 'latest'
-  | 'bullish'
-  | 'bearish';
-
-export const getCoins = async (currency: string, limit = 20) => {
-  const response = await api.get(`coins?currency=${currency}&limit=${limit}`);
+export const getCoins = async (params: GetCoinsParams) => {
+  const { currency = 'USD', limit = 20 } = params;
+  const response = await api.get<Coins>(
+    `coins?currency=${currency}&limit=${limit}`,
+  );
   return response.data;
 };
 
-export const getCoin = async (coinId: string, currency = 'USD') => {
-  const response = await api.get(`coins/${coinId}?currency=${currency}`);
+export const getCoin = async (params: GetCoinParams) => {
+  const { coinId, currency = 'USD' } = params;
+  const response = await api.get<Coin>(`coins/${coinId}?currency=${currency}`);
   return response.data;
 };
 
-export const getPriceChart = async (coinId: string, period: Period) => {
-  const response = await api.get(`charts?period=${period}&coinId=${coinId}`);
+export const getPriceChart = async (params: GetChartParams) => {
+  const { coinId, period = '24h' } = params;
+  const response = await api.get<ChartData>(
+    `charts?period=${period}&coinId=${coinId}`,
+  );
   return response.data;
 };
 
-export const getNews = async (filter: NewsFilter, limit = 20) => {
-  const response = await api.get(`news/${filter}?limit=${limit}`);
+export const getNews = async (params: GetNewsParams) => {
+  const { filter, limit = 20 } = params;
+  const response = await api.get<News>(`news/${filter}?limit=${limit}`);
   return response.data;
 };
 

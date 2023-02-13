@@ -1,10 +1,10 @@
-### * Coins prices
+### * Get list of coins
 GET https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=USD
 
-### * Coin prices
+### * Coin details by id
 GET https://api.coinstats.app/public/v1/coins/bitcoin?currency=USD
 
-### * Coin price history chart
+### * Coin price chart
 GET https://api.coinstats.app/public/v1/charts?period=24h&coinId=bitcoin
 
 ### * Get News by filter

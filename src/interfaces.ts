@@ -25,3 +25,16 @@ export interface Coin {
   priceChange1h: number;
   websiteUrl: string;
 }
+
+export interface Article {
+  id: string;
+  feedDate: number;
+  title: string;
+  imgURL: string;
+  description: string;
+  link: string;
+}
+
+export interface News {
+  news: Article[];
+}
