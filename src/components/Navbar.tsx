@@ -1,6 +1,7 @@
 import {
-  Anchor, Button, Container, Flex, Paper,
+  Anchor, Button, Container, Flex, Paper, Text,
 } from '@mantine/core';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -19,14 +20,14 @@ function Navbar() {
 
           <Flex align="center" gap="sm">
             <Button variant="light">
-              <Anchor href="/coins" variant="text">
-                Coins
-              </Anchor>
+              <NavLink to="/" style={{ textDecoration: 'none' }}>
+                <Text c="blue">Coins</Text>
+              </NavLink>
             </Button>
             <Button variant="subtle">
-              <Anchor href="/news" variant="text">
-                News
-              </Anchor>
+              <NavLink to="/news" style={{ textDecoration: 'none' }}>
+                <Text c="blue">News</Text>
+              </NavLink>
             </Button>
           </Flex>
         </Flex>
