@@ -1,4 +1,6 @@
-import { Flex, Image, Table } from '@mantine/core';
+import {
+  Badge, Flex, Image, Table, Text,
+} from '@mantine/core';
 import { useSelector } from 'react-redux';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
@@ -12,6 +14,58 @@ function CoinsPage() {
   if (!coins.length) {
     dispatch(fetchCoins());
   }
+
+  const rows = coins.map((coin) => (
+    <tr key={coin.id}>
+      <td>{coin.rank}</td>
+      <td>
+        <Flex align="center">
+          <Image src={coin.icon} alt={coin.name} mr="sm" width="2rem" />
+          <Text fw="bold">{coin.name}</Text>
+          <Text color="dimmed" fw="500" sx={{ marginLeft: '.375rem' }}>
+            {coin.symbol}
+          </Text>
+        </Flex>
+      </td>
+      <td>
+        {coin.priceChange1d < 0 ? (
+          <Badge color="red" size="lg" radius="sm">
+            &#9660;
+            {coin.priceChange1d}
+            %
+          </Badge>
+        ) : (
+          <Badge color="green" size="lg" radius="sm">
+            &#9650;
+            {coin.priceChange1d}
+            %
+          </Badge>
+        )}
+      </td>
+      <td>
+        <Text fw="500">
+          $
+          {coin.price < 1
+            ? coin.price.toFixed(6)
+            : coin.price.toLocaleString('en-US', {
+              maximumFractionDigits: 2,
+            })}
+        </Text>
+      </td>
+      <td>
+        <Text>
+          $
+          {abbreviateNum(coin.marketCap)}
+        </Text>
+      </td>
+      <td>
+        <Text>
+          $
+          {abbreviateNum(coin.volume)}
+        </Text>
+      </td>
+    </tr>
+  ));
 
   return (
     <PageWrapper>
@@ -32,33 +86,7 @@ function CoinsPage() {
             <th>Volume 24h</th>
           </tr>
         </thead>
-        <tbody>
-          {coins.map((coin) => (
-            <tr key={coin.id}>
-              <td>{coin.rank}</td>
-              <td>
-                <Flex align="center">
-                  <Image src={coin.icon} alt={coin.name} mr="sm" width="2rem" />
-                  {coin.name}
-                  {' '}
-                  (
-                  {coin.symbol}
-                  )
-                </Flex>
-              </td>
-              <td>{coin.priceChange1d}</td>
-              <td>
-                {coin.price < 1
-                  ? coin.price.toFixed(6)
-                  : coin.price.toLocaleString('en-US', {
-                    maximumFractionDigits: 2,
-                  })}
-              </td>
-              <td>{abbreviateNum(coin.marketCap)}</td>
-              <td>{abbreviateNum(coin.volume)}</td>
-            </tr>
-          ))}
-        </tbody>
+        <tbody>{rows}</tbody>
       </Table>
     </PageWrapper>
   );
