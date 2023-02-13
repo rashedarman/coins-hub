@@ -2,6 +2,7 @@ import {
   Badge, Flex, Image, Table, Text,
 } from '@mantine/core';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
 import { RootState, useAppDispatch } from '../store/configureStore';
@@ -9,6 +10,7 @@ import { abbreviateNum } from '../utils';
 
 function CoinsPage() {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const { coins } = useSelector((state: RootState) => state.coins);
   if (!coins.length) {
@@ -16,7 +18,11 @@ function CoinsPage() {
   }
 
   const rows = coins.map((coin) => (
-    <tr key={coin.id}>
+    <tr
+      key={coin.id}
+      onClick={() => navigate(`/coins/${coin.id}`)}
+      style={{ cursor: 'pointer' }}
+    >
       <td>{coin.rank}</td>
       <td>
         <Flex align="center">
