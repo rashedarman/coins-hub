@@ -12,20 +12,16 @@ function CoinDetails() {
   const [coinData, setCoinData] = useState<Coin | null>(null);
 
   useEffect(() => {
-    if (!coinId) return;
     const fetchCoin = async () => {
-      let selectedCoin: Coin;
-      if (coins.length > 0) {
-        [selectedCoin] = coins.filter((coin) => coin.id === coinId);
-      } else {
-        selectedCoin = await getCoin({ coinId });
-      }
+      const selectedCoin: Coin = coins.length > 0
+        ? coins.filter((coin) => coin.id === coinId)[0]
+        : (await getCoin({ coinId: coinId! })).coin;
       setCoinData(selectedCoin);
     };
     fetchCoin();
   }, [coinId, coins]);
 
-  if (!coinId) return <h1>Not found</h1>;
+  if (!coinData) return <h1>Not found</h1>;
 
   return <h1>CoinsPage</h1>;
 }

@@ -41,7 +41,9 @@ export const getCoins = async (params: GetCoinsParams = {}) => {
 
 export const getCoin = async (params: GetCoinParams) => {
   const { coinId, currency = 'USD' } = params;
-  const response = await api.get<Coin>(`coins/${coinId}?currency=${currency}`);
+  const response = await api.get<{ coin: Coin }>(
+    `coins/${coinId}?currency=${currency}`,
+  );
   return response.data;
 };
 
