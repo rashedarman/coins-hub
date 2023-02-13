@@ -1,4 +1,4 @@
-import { Text } from '@mantine/core';
+import { Flex, Image, Table } from '@mantine/core';
 import { useSelector } from 'react-redux';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
@@ -14,9 +14,51 @@ function CoinsPage() {
 
   return (
     <PageWrapper>
-      {coins.map((coin) => (
-        <Text key={coin.id}>{coin.name}</Text>
-      ))}
+      <Table
+        highlightOnHover
+        withBorder
+        verticalSpacing="lg"
+        horizontalSpacing="xl"
+        my="xl"
+      >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Change (24h)</th>
+            <th>Price</th>
+            <th>Market Cap</th>
+            <th>Volume 24h</th>
+          </tr>
+        </thead>
+        <tbody>
+          {coins.map((coin) => (
+            <tr key={coin.id}>
+              <td>{coin.rank}</td>
+              <td>
+                <Flex align="center">
+                  <Image src={coin.icon} alt={coin.name} mr="sm" width="2rem" />
+                  {coin.name}
+                  {' '}
+                  (
+                  {coin.symbol}
+                  )
+                </Flex>
+              </td>
+              <td>{coin.priceChange1d}</td>
+              <td>
+                {coin.price < 1
+                  ? coin.price.toFixed(6)
+                  : coin.price.toLocaleString('en-US', {
+                    maximumFractionDigits: 2,
+                  })}
+              </td>
+              <td>{coin.marketCap}</td>
+              <td>{coin.volume}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </PageWrapper>
   );
 }
