@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  cryptoCurrencies: [],
+  coins: [],
 };
 
-const cryptoSlice = createSlice({
-  name: 'crypto',
+const coinsSlice = createSlice({
+  name: 'coins',
   initialState,
   reducers: {},
 });
 
-export default cryptoSlice.reducer;
+export default coinsSlice.reducer;

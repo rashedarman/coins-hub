@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './pages/Home';
+import CoinsPage from './pages/Coins';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route index element={<CoinsPage />} />
       </Routes>
     </div>
   );
