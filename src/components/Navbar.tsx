@@ -1,9 +1,11 @@
 import {
-  Anchor, Button, Container, Flex, Paper, Text,
+  Anchor, Button, Container, Flex, Paper,
 } from '@mantine/core';
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
+  const location = useLocation();
+
   return (
     <Paper radius={0} shadow="sm" p="sm">
       <Container size="xl">
@@ -17,17 +19,20 @@ function Navbar() {
           >
             CoinsHub
           </Anchor>
-
           <Flex align="center" gap="sm">
-            <Button variant="light">
-              <NavLink to="/" style={{ textDecoration: 'none' }}>
-                <Text c="blue">Coins</Text>
-              </NavLink>
+            <Button
+              variant={location.pathname === '/' ? 'light' : 'subtle'}
+              component={Link}
+              to="/"
+            >
+              Coins
             </Button>
-            <Button variant="subtle">
-              <NavLink to="/news" style={{ textDecoration: 'none' }}>
-                <Text c="blue">News</Text>
-              </NavLink>
+            <Button
+              variant={location.pathname === '/news' ? 'light' : 'subtle'}
+              component={Link}
+              to="/news"
+            >
+              News
             </Button>
           </Flex>
         </Flex>
