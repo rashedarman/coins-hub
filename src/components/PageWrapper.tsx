@@ -6,7 +6,7 @@ type Props = {
 };
 
 function PageWrapper({ children }: Props) {
-  return <Container>{children}</Container>;
+  return <Container size="xl">{children}</Container>;
 }
 
 PageWrapper.propTypes = {

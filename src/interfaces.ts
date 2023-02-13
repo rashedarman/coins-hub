@@ -22,7 +22,7 @@ export interface Coin {
   marketCap: number;
   availableSupply: number;
   totalSupply: number;
-  priceChange1h: number;
+  priceChange1d: number;
   websiteUrl: string;
 }
 
