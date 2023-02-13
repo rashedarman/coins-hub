@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
 import { RootState, useAppDispatch } from '../store/configureStore';
+import { abbreviateNum } from '../utils';
 
 function CoinsPage() {
   const dispatch = useAppDispatch();
@@ -53,8 +54,8 @@ function CoinsPage() {
                     maximumFractionDigits: 2,
                   })}
               </td>
-              <td>{coin.marketCap}</td>
-              <td>{coin.volume}</td>
+              <td>{abbreviateNum(coin.marketCap)}</td>
+              <td>{abbreviateNum(coin.volume)}</td>
             </tr>
           ))}
         </tbody>
