@@ -1,5 +1,5 @@
 import {
-  Badge, Flex, Image, Table, Text,
+  Badge, Flex, Image, Table, Text, Title,
 } from '@mantine/core';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -75,6 +75,20 @@ function CoinsPage() {
 
   return (
     <PageWrapper>
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        gap="sm"
+        sx={{ margin: '2.5rem auto' }}
+      >
+        <Title fw="600">Best Coin Price Tracker in the Market</Title>
+        <Text>
+          With CoinStats, you can manage all your crypto assets from one
+          interface.
+        </Text>
+      </Flex>
+
       <Table
         highlightOnHover
         withBorder
