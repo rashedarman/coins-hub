@@ -18,7 +18,7 @@ function CoinsPage() {
     if (!coins.length) {
       dispatch(fetchCoins());
     }
-  }, [dispatch]);
+  }, [dispatch, coins.length]);
 
   useEffect(() => {
     setFilteredCoins(coins);

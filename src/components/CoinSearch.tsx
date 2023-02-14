@@ -20,7 +20,7 @@ function CoinSearch(props: Props) {
     onSetFilteredCoins(
       coins.filter(({ name }) => name.toLowerCase().includes(searchTerm.toLowerCase())),
     );
-  }, [searchTerm]);
+  }, [searchTerm, coins, onSetFilteredCoins]);
 
   return (
     <TextInput
