@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCoin } from '../api';
+import BackToHomeButton from '../components/BackToHomeButton';
 import CoinPrice from '../components/CoinPrice';
 import CoinStats from '../components/CoinStats';
 import PageWrapper from '../components/PageWrapper';
 import { Coin } from '../interfaces';
 import { RootState } from '../store/configureStore';
-import BackToHomeButton from './BackToHomeButton';
 
 function CoinDetails() {
   const { coinId } = useParams();
