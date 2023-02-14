@@ -1,5 +1,6 @@
 import { TextInput } from '@mantine/core';
-import { ChangeEvent } from 'react';
+import { useDebouncedState } from '@mantine/hooks';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ReactComponent as IconSearch } from '../assets/IconSearch.svg';
 import { Coin } from '../interfaces';
@@ -13,16 +14,17 @@ function CoinSearch(props: Props) {
   const { onSetFilteredCoins } = props;
   const { coins } = useSelector((state: RootState) => state.coins);
 
-  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value;
+  const [searchTerm, setSearchTerm] = useDebouncedState('', 300);
+
+  useEffect(() => {
     onSetFilteredCoins(
       coins.filter(({ name }) => name.toLowerCase().includes(searchTerm.toLowerCase())),
     );
-  };
+  }, [searchTerm]);
 
   return (
     <TextInput
-      onChange={handleSearch}
+      onChange={(event) => setSearchTerm(event.currentTarget.value)}
       size="md"
       placeholder="Search crypto"
       rightSection={<IconSearch />}
