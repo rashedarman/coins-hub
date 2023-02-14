@@ -39,11 +39,8 @@ function CoinsPage() {
           interface.
         </Text>
       </Flex>
-
       <CoinSearch onSetFilteredCoins={setFilteredCoins} />
-
       {loading && <Spinner />}
-
       {!loading && <CoinsListTable coins={filteredCoins} />}
     </PageWrapper>
   );

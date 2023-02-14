@@ -1,7 +1,7 @@
 import { Center, Loader } from '@mantine/core';
 
 const Spinner = () => (
-  <Center sx={{ height: '80vh' }}>
+  <Center sx={{ marginTop: '4rem' }}>
     <Loader size="md" />
   </Center>
 );
