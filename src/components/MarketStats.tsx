@@ -14,11 +14,11 @@ interface Props extends DefaultProps {
   coin: Coin;
 }
 
-function CoinStats(props: Props) {
+function MarketStats(props: Props) {
   const { coin, ...styleProps } = props;
 
   return (
-    <Box {...styleProps} sx={{ marginTop: '2.5rem' }}>
+    <Box {...styleProps}>
       <Title order={3} fw="600" m="xs">
         Market Stats
       </Title>
@@ -125,4 +125,4 @@ function CoinStats(props: Props) {
   );
 }
 
-export default CoinStats;
+export default MarketStats;

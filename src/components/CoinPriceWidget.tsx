@@ -8,7 +8,7 @@ interface Props extends DefaultProps {
   coin: Coin;
 }
 
-const CoinPrice = (props: Props) => {
+const CoinPriceWidget = (props: Props) => {
   const {
     coin: {
       icon, name, symbol, price, priceChange1d,
@@ -17,7 +17,7 @@ const CoinPrice = (props: Props) => {
   } = props;
 
   return (
-    <Flex direction="column" gap="xs" {...styleProps}>
+    <Flex direction="column" rowGap="md" {...styleProps}>
       <Flex align="center">
         <Image src={icon} alt={name} mr="sm" width="2.5rem" />
         <Title order={1} size="h3" tt="capitalize" fw={600}>
@@ -30,7 +30,7 @@ const CoinPrice = (props: Props) => {
         </Text>
       </Flex>
       <Flex align="center">
-        <Title order={3} size="h2" fw="600">
+        <Title order={2} fw="600">
           $
           {price < 1
             ? price.toFixed(6)
@@ -46,4 +46,4 @@ const CoinPrice = (props: Props) => {
   );
 };
 
-export default CoinPrice;
+export default CoinPriceWidget;
