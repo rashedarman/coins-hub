@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-export const abbreviateNum = (num: number) => {
+export const priceToKMB = (num: number) => {
   // If the number is greater than or equal to 1 billion
   if (num >= 1000000000) return `${(num / 1000000000).toFixed(1)}B`;
 
