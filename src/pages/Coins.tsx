@@ -1,5 +1,12 @@
 import {
-  Badge, Flex, Image, Table, Text, Title,
+  Badge,
+  Center,
+  Flex,
+  Image,
+  Loader,
+  Table,
+  Text,
+  Title,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -14,16 +21,18 @@ function CoinsPage() {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const { coins } = useSelector((state: RootState) => state.coins);
+  const { loading, coins } = useSelector((state: RootState) => state.coins);
   const [filteredCoins, setFilteredCoins] = useState(coins);
+
+  useEffect(() => {
+    if (!coins.length) {
+      dispatch(fetchCoins());
+    }
+  }, [dispatch]);
 
   useEffect(() => {
     setFilteredCoins(coins);
   }, [coins]);
-
-  if (!coins.length) {
-    dispatch(fetchCoins());
-  }
 
   const rows = filteredCoins.map((coin) => (
     <tr
@@ -99,25 +108,33 @@ function CoinsPage() {
 
       <CoinSearch onSetFilteredCoins={setFilteredCoins} />
 
-      <Table
-        highlightOnHover
-        withBorder
-        verticalSpacing="lg"
-        horizontalSpacing="xl"
-        my="xl"
-      >
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Change (24h)</th>
-            <th>Price</th>
-            <th>Market Cap</th>
-            <th>Volume 24h</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </Table>
+      {loading && (
+        <Center sx={{ marginTop: '2.5rem' }}>
+          <Loader size="md" />
+        </Center>
+      )}
+
+      {!loading && (
+        <Table
+          highlightOnHover
+          withBorder
+          verticalSpacing="lg"
+          horizontalSpacing="xl"
+          my="xl"
+        >
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Change (24h)</th>
+              <th>Price</th>
+              <th>Market Cap</th>
+              <th>Volume 24h</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </Table>
+      )}
     </PageWrapper>
   );
 }
