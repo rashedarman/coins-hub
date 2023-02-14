@@ -9,6 +9,7 @@ import CoinStats from '../components/CoinStats';
 import PageWrapper from '../components/PageWrapper';
 import { Coin } from '../interfaces';
 import { RootState } from '../store/configureStore';
+import NotFound from './NotFound';
 
 function CoinDetails() {
   const { coinId } = useParams();
@@ -26,7 +27,7 @@ function CoinDetails() {
     fetchCoin();
   }, [coinId, coins]);
 
-  if (!coinData) return null;
+  if (!coinData) return <NotFound />;
 
   return (
     <PageWrapper>
