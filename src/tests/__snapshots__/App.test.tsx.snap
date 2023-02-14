@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Coins Page component renders the component properly 1`] = `
+exports[`App component renders the component properly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
