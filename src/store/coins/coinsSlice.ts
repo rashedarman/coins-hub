@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const fetchCoins = createAsyncThunk(FETCH, async () => {
-  const { coins } = await getCoins();
+  const { coins } = await getCoins({ limit: 50 });
   return coins;
 });
 
