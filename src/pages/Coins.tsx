@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
 import { RootState, useAppDispatch } from '../store/configureStore';
-import { abbreviateNum } from '../utils';
+import { priceToKMB } from '../utils';
 
 function CoinsPage() {
   const dispatch = useAppDispatch();
@@ -61,13 +61,13 @@ function CoinsPage() {
       <td>
         <Text>
           $
-          {abbreviateNum(coin.marketCap)}
+          {priceToKMB(coin.marketCap)}
         </Text>
       </td>
       <td>
         <Text>
           $
-          {abbreviateNum(coin.volume)}
+          {priceToKMB(coin.volume)}
         </Text>
       </td>
     </tr>
