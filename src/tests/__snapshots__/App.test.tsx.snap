@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coins Page component renders the component properly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <div
+          class="mantine-Paper-root mantine-b6l3za"
+        >
+          <div
+            class="mantine-Container-root mantine-10nsg3v"
+          >
+            <div
+              class="mantine-73o8aw"
+            >
+              <a
+                class="mantine-Text-root mantine-Anchor-root mantine-1r3ifef"
+                href="/"
+                style="font-size: 1.75rem;"
+              >
+                CoinsHub
+              </a>
+              <div
+                class="mantine-879la3"
+              >
+                <a
+                  class="mantine-UnstyledButton-root mantine-Button-root mantine-q631dw"
+                  data-button="true"
+                  href="/"
+                  type="button"
+                >
+                  <div
+                    class="mantine-3xbgk5 mantine-Button-inner"
+                  >
+                    <span
+                      class="mantine-qo1k2 mantine-Button-label"
+                    >
+                      Coins
+                    </span>
+                  </div>
+                </a>
+                <a
+                  class="mantine-UnstyledButton-root mantine-Button-root mantine-v7cs62"
+                  data-button="true"
+                  href="/news"
+                  type="button"
+                >
+                  <div
+                    class="mantine-3xbgk5 mantine-Button-inner"
+                  >
+                    <span
+                      class="mantine-qo1k2 mantine-Button-label"
+                    >
+                      News
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mantine-Container-root mantine-sz575t"
+        >
+          <div
+            class="mantine-11ol2j9"
+          >
+            <h1
+              class="mantine-Text-root mantine-Title-root mantine-10wkz9q"
+            >
+              Best Coin Price Tracker in the Market
+            </h1>
+            <div
+              class="mantine-Text-root mantine-1pbxw0k"
+            >
+              With CoinStats, you can manage all your crypto assets from one interface.
+            </div>
+          </div>
+          <div
+            class="mantine-InputWrapper-root mantine-TextInput-root mantine-1m3pqry"
+          >
+            <div
+              class="mantine-Input-wrapper mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-Input-input mantine-TextInput-input mantine-ywb7zt"
+                id="mantine-r0"
+                placeholder="Search crypto"
+                type="text"
+              />
+              <div
+                class="mantine-1n9cu5e mantine-Input-rightSection mantine-TextInput-rightSection"
+              >
+                <div />
+              </div>
+            </div>
+          </div>
+          <div
+            class="mantine-6hoaow"
+          >
+            <svg
+              class="mantine-1avyp1d"
+              height="36px"
+              role="presentation"
+              stroke="#228be6"
+              viewBox="0 0 38 38"
+              width="36px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g
+                  stroke-width="5"
+                  transform="translate(2.5 2.5)"
+                >
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="16"
+                    stroke-opacity=".5"
+                  />
+                  <path
+                    d="M32 16c0-9.94-8.06-16-16-16"
+                  >
+                    <animatetransform
+                      attributeName="transform"
+                      dur="1s"
+                      from="0 16 16"
+                      repeatCount="indefinite"
+                      to="360 16 16"
+                      type="rotate"
+                    />
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <div
+        class="mantine-Paper-root mantine-b6l3za"
+      >
+        <div
+          class="mantine-Container-root mantine-10nsg3v"
+        >
+          <div
+            class="mantine-73o8aw"
+          >
+            <a
+              class="mantine-Text-root mantine-Anchor-root mantine-1r3ifef"
+              href="/"
+              style="font-size: 1.75rem;"
+            >
+              CoinsHub
+            </a>
+            <div
+              class="mantine-879la3"
+            >
+              <a
+                class="mantine-UnstyledButton-root mantine-Button-root mantine-q631dw"
+                data-button="true"
+                href="/"
+                type="button"
+              >
+                <div
+                  class="mantine-3xbgk5 mantine-Button-inner"
+                >
+                  <span
+                    class="mantine-qo1k2 mantine-Button-label"
+                  >
+                    Coins
+                  </span>
+                </div>
+              </a>
+              <a
+                class="mantine-UnstyledButton-root mantine-Button-root mantine-v7cs62"
+                data-button="true"
+                href="/news"
+                type="button"
+              >
+                <div
+                  class="mantine-3xbgk5 mantine-Button-inner"
+                >
+                  <span
+                    class="mantine-qo1k2 mantine-Button-label"
+                  >
+                    News
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mantine-Container-root mantine-sz575t"
+      >
+        <div
+          class="mantine-11ol2j9"
+        >
+          <h1
+            class="mantine-Text-root mantine-Title-root mantine-10wkz9q"
+          >
+            Best Coin Price Tracker in the Market
+          </h1>
+          <div
+            class="mantine-Text-root mantine-1pbxw0k"
+          >
+            With CoinStats, you can manage all your crypto assets from one interface.
+          </div>
+        </div>
+        <div
+          class="mantine-InputWrapper-root mantine-TextInput-root mantine-1m3pqry"
+        >
+          <div
+            class="mantine-Input-wrapper mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-Input-input mantine-TextInput-input mantine-ywb7zt"
+              id="mantine-r0"
+              placeholder="Search crypto"
+              type="text"
+            />
+            <div
+              class="mantine-1n9cu5e mantine-Input-rightSection mantine-TextInput-rightSection"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="mantine-6hoaow"
+        >
+          <svg
+            class="mantine-1avyp1d"
+            height="36px"
+            role="presentation"
+            stroke="#228be6"
+            viewBox="0 0 38 38"
+            width="36px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                stroke-width="5"
+                transform="translate(2.5 2.5)"
+              >
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="16"
+                  stroke-opacity=".5"
+                />
+                <path
+                  d="M32 16c0-9.94-8.06-16-16-16"
+                >
+                  <animatetransform
+                    attributeName="transform"
+                    dur="1s"
+                    from="0 16 16"
+                    repeatCount="indefinite"
+                    to="360 16 16"
+                    type="rotate"
+                  />
+                </path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
