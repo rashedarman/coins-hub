@@ -6,6 +6,8 @@ const FETCH = 'coins/FETCH';
 
 const initialState = {
   coins: [] as Coin[],
+  loading: false,
+  error: null as string | null,
 };
 
 export const fetchCoins = createAsyncThunk(FETCH, async () => {
@@ -18,10 +20,21 @@ const coinsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(fetchCoins.fulfilled, (state, action) => ({
-      ...state,
-      coins: action.payload,
-    }));
+    builder
+      .addCase(fetchCoins.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(fetchCoins.fulfilled, (state, action) => ({
+        ...state,
+        coins: action.payload,
+        loading: false,
+      }))
+      .addCase(fetchCoins.rejected, (state) => ({
+        ...state,
+        error: 'Something went wrong',
+        loading: false,
+      }));
   },
 });
 
