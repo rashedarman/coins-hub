@@ -1,4 +1,4 @@
-import { Badge } from '@mantine/core';
+import { Badge, Center } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -8,6 +8,7 @@ import CoinStats from '../components/CoinStats';
 import PageWrapper from '../components/PageWrapper';
 import { Coin } from '../interfaces';
 import { RootState } from '../store/configureStore';
+import BackToHomeButton from './BackToHomeButton';
 
 function CoinDetails() {
   const { coinId } = useParams();
@@ -36,6 +37,10 @@ function CoinDetails() {
       </Badge>
       <CoinPrice coin={coinData} mb="xl" />
       <CoinStats coin={coinData} />
+
+      <Center my="xl">
+        <BackToHomeButton />
+      </Center>
     </PageWrapper>
   );
 }
