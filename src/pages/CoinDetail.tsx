@@ -26,8 +26,7 @@ function CoinDetails() {
     fetchCoin();
   }, [coinId, coins]);
 
-  // TODO: navigate to 404 page
-  if (!coinData) return <h1>Not found</h1>;
+  if (!coinData) return null;
 
   return (
     <PageWrapper>
@@ -37,7 +36,6 @@ function CoinDetails() {
       </Badge>
       <CoinPrice coin={coinData} mb="xl" />
       <CoinStats coin={coinData} />
-
       <Center my="xl">
         <BackToHomeButton />
       </Center>

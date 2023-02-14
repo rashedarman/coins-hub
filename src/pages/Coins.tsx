@@ -1,8 +1,10 @@
 import {
   Badge, Flex, Image, Table, Text, Title,
 } from '@mantine/core';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import CoinSearch from '../components/CoinSearch';
 import PageWrapper from '../components/PageWrapper';
 import { fetchCoins } from '../store/coins/coinsSlice';
 import { RootState, useAppDispatch } from '../store/configureStore';
@@ -13,11 +15,17 @@ function CoinsPage() {
   const navigate = useNavigate();
 
   const { coins } = useSelector((state: RootState) => state.coins);
+  const [filteredCoins, setFilteredCoins] = useState(coins);
+
+  useEffect(() => {
+    setFilteredCoins(coins);
+  }, [coins]);
+
   if (!coins.length) {
     dispatch(fetchCoins());
   }
 
-  const rows = coins.map((coin) => (
+  const rows = filteredCoins.map((coin) => (
     <tr
       key={coin.id}
       onClick={() => navigate(`/coins/${coin.id}`)}
@@ -88,6 +96,8 @@ function CoinsPage() {
           interface.
         </Text>
       </Flex>
+
+      <CoinSearch onSetFilteredCoins={setFilteredCoins} />
 
       <Table
         highlightOnHover
