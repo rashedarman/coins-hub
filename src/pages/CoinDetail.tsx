@@ -9,6 +9,7 @@ import BackToHomeButton from '../components/BackToHomeButton';
 import CoinPriceWidget from '../components/CoinPriceWidget';
 import MarketStats from '../components/MarketStats';
 import PageWrapper from '../components/PageWrapper';
+import Spinner from '../components/Spinner';
 import { Coin } from '../interfaces';
 import { RootState } from '../store/configureStore';
 import NotFound from './NotFound';
@@ -18,6 +19,7 @@ function CoinDetails() {
   const { coins } = useSelector((state: RootState) => state.coins);
 
   const [coinData, setCoinData] = useState<Coin | null>(null);
+  const [coinLoaded, setCoinLoaded] = useState(false);
 
   useEffect(() => {
     const fetchCoin = async () => {
@@ -25,10 +27,12 @@ function CoinDetails() {
         ? coins.filter((coin) => coin.id === coinId)[0]
         : (await getCoin({ coinId: coinId! })).coin;
       setCoinData(selectedCoin);
+      setCoinLoaded(true);
     };
     fetchCoin();
   }, [coinId, coins]);
 
+  if (!coinLoaded) return <Spinner />;
   if (!coinData) return <NotFound />;
 
   return (
