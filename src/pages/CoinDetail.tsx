@@ -31,6 +31,7 @@ function CoinDetails() {
 
   return (
     <PageWrapper>
+      {/* TODO: use box stuff */}
       <Badge color="orange" radius="sm" variant="filled" my="xl">
         RANK #
         {coinData.rank}

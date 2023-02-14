@@ -1,13 +1,8 @@
 import {
-  Badge,
-  Box,
-  DefaultProps,
-  Flex,
-  Image,
-  Text,
-  Title,
+  Box, DefaultProps, Flex, Image, Text, Title,
 } from '@mantine/core';
 import { Coin } from '../interfaces';
+import PriceChangeBadge from './PriceChangeBadge';
 
 interface Props extends DefaultProps {
   coin: Coin;
@@ -44,30 +39,7 @@ const CoinPrice = (props: Props) => {
             })}
         </Title>
         <Box ml="sm">
-          {priceChange1d < 0 ? (
-            <Badge
-              color="red"
-              size="lg"
-              radius="md"
-              sx={{ fontSize: '.875rem' }}
-            >
-              &#9660;
-              {priceChange1d}
-              %
-            </Badge>
-          ) : (
-            <Badge
-              variant="filled"
-              color="green"
-              size="lg"
-              radius="md"
-              sx={{ fontSize: '.875rem' }}
-            >
-              &#9650;
-              {priceChange1d}
-              %
-            </Badge>
-          )}
+          <PriceChangeBadge priceChange={priceChange1d} />
         </Box>
       </Flex>
     </Flex>
