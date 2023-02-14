@@ -1,7 +1,11 @@
+import { Badge } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCoin } from '../api';
+import CoinPrice from '../components/CoinPrice';
+import CoinStats from '../components/CoinStats';
+import PageWrapper from '../components/PageWrapper';
 import { Coin } from '../interfaces';
 import { RootState } from '../store/configureStore';
 
@@ -21,9 +25,19 @@ function CoinDetails() {
     fetchCoin();
   }, [coinId, coins]);
 
+  // TODO: navigate to 404 page
   if (!coinData) return <h1>Not found</h1>;
 
-  return <h1>CoinsPage</h1>;
+  return (
+    <PageWrapper>
+      <Badge color="orange" radius="sm" variant="filled" my="xl">
+        RANK #
+        {coinData.rank}
+      </Badge>
+      <CoinPrice coin={coinData} mb="xl" />
+      <CoinStats coin={coinData} />
+    </PageWrapper>
+  );
 }
 
 export default CoinDetails;
