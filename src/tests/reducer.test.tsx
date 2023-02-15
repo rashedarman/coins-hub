@@ -1,38 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { Coin } from '../interfaces';
 import coinsSlice, { fetchCoins } from '../store/coins/coinsSlice';
 import { RootState } from '../store/configureStore';
-
-const apiMockData: Coin[] = [
-  {
-    id: 'bitcoin',
-    icon: 'https://www.example.com/bitcoin.png',
-    name: 'Bitcoin',
-    symbol: 'BTC',
-    rank: 1,
-    price: 48298.31,
-    volume: 45119855843,
-    marketCap: 906236851357,
-    availableSupply: 18765868,
-    totalSupply: 21000000,
-    priceChange1d: 1.52,
-    websiteUrl: 'https://bitcoin.org/',
-  },
-  {
-    id: 'ethereum',
-    icon: 'https://www.example.com/ethereum.png',
-    name: 'Ethereum',
-    symbol: 'ETH',
-    rank: 2,
-    price: 1759.18,
-    volume: 25509058436,
-    marketCap: 202141688507,
-    availableSupply: 115113451,
-    totalSupply: 115113451,
-    priceChange1d: 0.43,
-    websiteUrl: 'https://ethereum.org/',
-  },
-];
+import { coins as apiMockData } from './__mockData';
 
 describe('Test coin slice', () => {
   it('should fulfill fetchCoins thunk', () => {
