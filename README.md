@@ -1,11 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-
-  <h3><b>CoinsHub</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -35,6 +29,8 @@
 
 **CoinsHub** is a price tracker web application for cryptocurrencies. Manage and track cryptocurrency prices, view exchanges, and stay informed on trending news and articles. Built with React, Redux, and TypeScript.
 
+![Screenshot](./screenshot.png)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -42,12 +38,10 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li>Vite</li>
     <li>TypeScript</li>
-    <li>React.js</li>
+    <li>React (Vite)</li>
     <li>React Router</li>
     <li>Redux Toolkit</li>
-    <li>Sass</li>
     <li>Mantine</li>
   </ul>
 </details>
