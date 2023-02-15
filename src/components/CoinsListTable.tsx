@@ -1,9 +1,8 @@
 import { Table, Text } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import { Coin } from '../interfaces';
-import { priceToKMB } from '../utils';
+import { formatCoinPrice, priceToKMB } from '../utils';
 import CoinIconNameSymbol from './CoinNameIcon';
-import CoinPriceText from './CoinPriceText';
 import PriceChangeBadge from './PriceChangeBadge';
 
 interface Props {
@@ -52,7 +51,7 @@ const CoinsListTable = (props: Props) => {
               <PriceChangeBadge priceChange={coin.priceChange1d} />
             </td>
             <td>
-              <CoinPriceText price={coin.price} />
+              <Text fw="500">{formatCoinPrice(coin.price)}</Text>
             </td>
             <td>
               <Text>

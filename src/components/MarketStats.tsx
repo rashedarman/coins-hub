@@ -8,7 +8,7 @@ import {
   Title,
 } from '@mantine/core';
 import { Coin } from '../interfaces';
-import { priceToKMB } from '../utils';
+import { formatCoinPrice, priceToKMB } from '../utils';
 
 interface Props extends DefaultProps {
   coin: Coin;
@@ -82,11 +82,9 @@ function MarketStats(props: Props) {
             {coin.name}
             {' '}
             <b>
-              price is $
-              {coin.price.toLocaleString('en-US', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
+              price is
+              {' '}
+              {formatCoinPrice(coin.price)}
               ,
               {' '}
               {coin.priceChange1d < 0 ? 'down' : 'up'}
