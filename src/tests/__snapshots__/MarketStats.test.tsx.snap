@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing CoinsListTable component Renders CoinsListTable component correctly 1`] = `
+<div>
+  <div
+    class="mantine-1avyp1d"
+  >
+    <h3
+      class="mantine-Text-root mantine-Title-root mantine-11dqeqv"
+    >
+      Market Stats
+    </h3>
+    <div
+      class="mantine-Paper-root mantine-6h2oqv"
+    >
+      <div
+        class="mantine-73o8aw"
+      >
+        <div
+          class="mantine-1fr50if"
+        >
+          <div
+            class="mantine-Text-root mantine-1m93l80"
+          >
+            Market Cap
+          </div>
+          <div
+            class="mantine-Text-root mantine-76dy9l"
+          >
+            442.8B
+          </div>
+        </div>
+        <div
+          class="mantine-1fr50if"
+        >
+          <div
+            class="mantine-Text-root mantine-1m93l80"
+          >
+            Fully Dilluted Valuation
+          </div>
+          <div
+            class="mantine-Text-root mantine-76dy9l"
+          >
+            $
+            482.1B
+          </div>
+        </div>
+        <div
+          class="mantine-1fr50if"
+        >
+          <div
+            class="mantine-Text-root mantine-1m93l80"
+          >
+            Circulating Supply
+          </div>
+          <div
+            class="mantine-Text-root mantine-76dy9l"
+          >
+            $
+            19,285,012
+          </div>
+        </div>
+        <div
+          class="mantine-1fr50if"
+        >
+          <div
+            class="mantine-Text-root mantine-1m93l80"
+          >
+            Total Supply
+          </div>
+          <div
+            class="mantine-Text-root mantine-76dy9l"
+          >
+            $
+            21000000
+          </div>
+        </div>
+        <div
+          class="mantine-1fr50if"
+        >
+          <div
+            class="mantine-Text-root mantine-1m93l80"
+          >
+            Volume 24h
+          </div>
+          <div
+            class="mantine-Text-root mantine-76dy9l"
+          >
+            $
+            36.4B
+          </div>
+        </div>
+      </div>
+      <div
+        class="mantine-Divider-root mantine-Divider-horizontal mantine-kqmy2u"
+        role="separator"
+      />
+      <div
+        class="mantine-1avyp1d"
+      >
+        <h4
+          class="mantine-Text-root mantine-Title-root mantine-1gqz47j"
+        >
+          Bitcoin
+           
+          Price Update
+        </h4>
+        <div
+          class="mantine-Text-root mantine-1pbxw0k"
+        >
+          Bitcoin
+           
+          <b>
+            price is
+             
+            $22,959.00
+            ,
+             
+            down
+             
+            0.15
+            %
+             
+          </b>
+          in the last 24 hours, and the live market cap is
+           
+          <b>
+            $
+            442.8B
+          </b>
+          . It has circulating
+           
+          <b>
+            supply volume of $
+            19,285,012
+             
+            BTC
+          </b>
+           
+          coins and a max. supply volume of
+           
+          21000000
+           
+          alongside $
+          36.4B
+           
+          24h trading volume.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
