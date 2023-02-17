@@ -10,10 +10,10 @@ function CoinsList(props: Coins) {
     <PageWrapper>
       <SimpleGrid
         cols={4}
+        spacing="sm"
         breakpoints={[
           { maxWidth: 'md', cols: 3 },
           { maxWidth: 'sm', cols: 2 },
-          { maxWidth: 'xs', cols: 1 },
         ]}
         my="xl"
       >
