@@ -17,7 +17,19 @@ function CoinItem(props: Props) {
   } = props;
 
   return (
-    <Card shadow="sm" p="md" radius="md" withBorder>
+    <Card
+      shadow="md"
+      radius="md"
+      p="md"
+      withBorder
+      sx={{
+        cursor: 'pointer',
+        transition: 'box-shadow 0.3s ease',
+        '&:hover': {
+          boxShadow: 'none',
+        },
+      }}
+    >
       <Flex justify="space-between">
         <Image src={icon} width="60px" />
         <Badge color="gray" radius="sm" variant="filled">
