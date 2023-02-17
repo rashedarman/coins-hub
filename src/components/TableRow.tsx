@@ -13,10 +13,10 @@ function TableRow(props: Props) {
   return (
     <Box component="tr" sx={{ textAlign: 'center' }}>
       <td>
-        <Text fz="md">{label}</Text>
+        <Text size="md">{label}</Text>
       </td>
       <td>
-        <Text fz="md" fw="500">
+        <Text size="md" fw="600">
           {value}
         </Text>
       </td>
