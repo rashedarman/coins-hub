@@ -62,6 +62,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://coins-hub-rashedarman.vercel.app)
+- [Video Walkthrough](https://www.loom.com/share/c2026fa987c6435bbe33711891aab7c0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
