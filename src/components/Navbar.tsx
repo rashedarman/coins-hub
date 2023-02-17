@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <Paper radius={0} shadow="sm" p="sm">
       <Container size="xl">
-        <Anchor href="/" variant="text" c="blue" fw={700} fz="xl">
+        <Anchor href="/" variant="text" fw={700} fz="xl">
           CoinsHub
         </Anchor>
       </Container>

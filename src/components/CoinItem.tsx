@@ -22,15 +22,14 @@ function CoinItem(props: Props) {
   return (
     <Card
       onClick={() => navigate(`/coins/${id}`)}
-      shadow="md"
       radius="md"
       p="md"
       withBorder
       sx={{
         cursor: 'pointer',
-        transition: 'box-shadow 0.3s ease',
+        transition: 'transform 0.2s linear',
         '&:hover': {
-          boxShadow: 'none',
+          transform: 'scale(1.03)',
         },
       }}
     >

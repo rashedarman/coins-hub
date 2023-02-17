@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Provider store={store}>
         <MantineProvider
           theme={{
+            colorScheme: 'dark',
             fontFamily: 'Montserrat, sans-serif',
             headings: {
               fontFamily: 'Poppins, sans-serif',
