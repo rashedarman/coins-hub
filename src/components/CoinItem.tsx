@@ -1,6 +1,7 @@
 import {
   Badge, Card, Flex, Image, Text,
 } from '@mantine/core';
+import { useNavigate } from 'react-router-dom';
 import { Coin } from '../interfaces';
 import { formatCoinPrice } from '../utils';
 import PriceChangeBadge from './PriceChangeBadge';
@@ -12,12 +13,15 @@ interface Props {
 function CoinItem(props: Props) {
   const {
     coin: {
-      name, symbol, icon, rank, price, priceChange1d,
+      id, name, symbol, icon, rank, price, priceChange1d,
     },
   } = props;
 
+  const navigate = useNavigate();
+
   return (
     <Card
+      onClick={() => navigate(`/coins/${id}`)}
       shadow="md"
       radius="md"
       p="md"
