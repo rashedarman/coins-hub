@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing CoinsListTable component Renders CoinsListTable component correctly 1`] = `
+<div>
+  <div
+    class="mantine-Container-root mantine-sz575t"
+  >
+    <div
+      class="mantine-SimpleGrid-root mantine-1xwjr2u"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-1swzeoq"
+      >
+        <div
+          class="mantine-73o8aw"
+        >
+          <div
+            class="mantine-Image-root mantine-15po0m8"
+            style="width: 60px;"
+          >
+            <figure
+              class="mantine-11nhzn5 mantine-Image-figure"
+            >
+              <div
+                class="mantine-qqmv3w mantine-Image-imageWrapper"
+              >
+                <img
+                  class="mantine-3y8yz3 mantine-Image-image"
+                  src="https://static.coinstats.app/coins/1650455588819.png"
+                  style="object-fit: cover; width: 60px; height: auto;"
+                />
+              </div>
+            </figure>
+          </div>
+          <div
+            class="mantine-Badge-root mantine-6iang"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              RANK #
+              1
+            </span>
+          </div>
+        </div>
+        <div
+          class="mantine-Text-root mantine-11o1k2d"
+        >
+          Bitcoin
+           
+          (
+          BTC
+          )
+        </div>
+        <div
+          class="mantine-879la3"
+        >
+          <div
+            class="mantine-Text-root mantine-1l0xknd"
+          >
+            $22,959.00
+          </div>
+          <div>
+            <div
+              class="mantine-Badge-root mantine-1w333o4"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                ▼
+                -0.15
+                %
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-1swzeoq"
+      >
+        <div
+          class="mantine-73o8aw"
+        >
+          <div
+            class="mantine-Image-root mantine-15po0m8"
+            style="width: 60px;"
+          >
+            <figure
+              class="mantine-11nhzn5 mantine-Image-figure"
+            >
+              <div
+                class="mantine-qqmv3w mantine-Image-imageWrapper"
+              >
+                <img
+                  class="mantine-3y8yz3 mantine-Image-image"
+                  src="https://static.coinstats.app/coins/1633034449328.png"
+                  style="object-fit: cover; width: 60px; height: auto;"
+                />
+              </div>
+            </figure>
+          </div>
+          <div
+            class="mantine-Badge-root mantine-6iang"
+          >
+            <span
+              class="mantine-h9iq4m mantine-Badge-inner"
+            >
+              RANK #
+              2
+            </span>
+          </div>
+        </div>
+        <div
+          class="mantine-Text-root mantine-11o1k2d"
+        >
+          Ethereum
+           
+          (
+          ETH
+          )
+        </div>
+        <div
+          class="mantine-879la3"
+        >
+          <div
+            class="mantine-Text-root mantine-1l0xknd"
+          >
+            $1,727.00
+          </div>
+          <div>
+            <div
+              class="mantine-Badge-root mantine-1w333o4"
+            >
+              <span
+                class="mantine-h9iq4m mantine-Badge-inner"
+              >
+                ▼
+                -0.24
+                %
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

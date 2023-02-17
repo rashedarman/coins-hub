@@ -14,53 +14,12 @@ exports[`App component renders the component properly 1`] = `
           <div
             class="mantine-Container-root mantine-10nsg3v"
           >
-            <div
-              class="mantine-73o8aw"
+            <a
+              class="mantine-Text-root mantine-Anchor-root mantine-u2q2r6"
+              href="/"
             >
-              <a
-                class="mantine-Text-root mantine-Anchor-root mantine-1r3ifef"
-                href="/"
-                style="font-size: 1.75rem;"
-              >
-                CoinsHub
-              </a>
-              <div
-                class="mantine-879la3"
-              >
-                <a
-                  class="mantine-UnstyledButton-root mantine-Button-root mantine-q631dw"
-                  data-button="true"
-                  href="/"
-                  type="button"
-                >
-                  <div
-                    class="mantine-3xbgk5 mantine-Button-inner"
-                  >
-                    <span
-                      class="mantine-qo1k2 mantine-Button-label"
-                    >
-                      Coins
-                    </span>
-                  </div>
-                </a>
-                <a
-                  class="mantine-UnstyledButton-root mantine-Button-root mantine-v7cs62"
-                  data-button="true"
-                  href="/news"
-                  type="button"
-                >
-                  <div
-                    class="mantine-3xbgk5 mantine-Button-inner"
-                  >
-                    <span
-                      class="mantine-qo1k2 mantine-Button-label"
-                    >
-                      News
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
+              CoinsHub
+            </a>
           </div>
         </div>
         <div
@@ -156,53 +115,12 @@ exports[`App component renders the component properly 1`] = `
         <div
           class="mantine-Container-root mantine-10nsg3v"
         >
-          <div
-            class="mantine-73o8aw"
+          <a
+            class="mantine-Text-root mantine-Anchor-root mantine-u2q2r6"
+            href="/"
           >
-            <a
-              class="mantine-Text-root mantine-Anchor-root mantine-1r3ifef"
-              href="/"
-              style="font-size: 1.75rem;"
-            >
-              CoinsHub
-            </a>
-            <div
-              class="mantine-879la3"
-            >
-              <a
-                class="mantine-UnstyledButton-root mantine-Button-root mantine-q631dw"
-                data-button="true"
-                href="/"
-                type="button"
-              >
-                <div
-                  class="mantine-3xbgk5 mantine-Button-inner"
-                >
-                  <span
-                    class="mantine-qo1k2 mantine-Button-label"
-                  >
-                    Coins
-                  </span>
-                </div>
-              </a>
-              <a
-                class="mantine-UnstyledButton-root mantine-Button-root mantine-v7cs62"
-                data-button="true"
-                href="/news"
-                type="button"
-              >
-                <div
-                  class="mantine-3xbgk5 mantine-Button-inner"
-                >
-                  <span
-                    class="mantine-qo1k2 mantine-Button-label"
-                  >
-                    News
-                  </span>
-                </div>
-              </a>
-            </div>
-          </div>
+            CoinsHub
+          </a>
         </div>
       </div>
       <div
