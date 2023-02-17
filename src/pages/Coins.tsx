@@ -1,8 +1,8 @@
 import { Flex, Text, Title } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import CoinList from '../components/CoinList';
 import CoinSearch from '../components/CoinSearch';
-import CoinsListTable from '../components/CoinsListTable';
 import PageWrapper from '../components/PageWrapper';
 import Spinner from '../components/Spinner';
 import { fetchCoins } from '../store/coins/coinsSlice';
@@ -41,7 +41,7 @@ function CoinsPage() {
       </Flex>
       <CoinSearch onSetFilteredCoins={setFilteredCoins} />
       {loading && <Spinner />}
-      {!loading && <CoinsListTable coins={filteredCoins} />}
+      {!loading && <CoinList coins={filteredCoins} />}
     </PageWrapper>
   );
 }
