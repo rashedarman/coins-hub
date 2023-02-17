@@ -9,13 +9,13 @@ const PriceChangeBadge = (props: Props) => {
   return (
     <div>
       {priceChange < 0 ? (
-        <Badge color="red" size="lg" radius="sm">
+        <Badge color="red" size="lg" radius="lg" p="xs">
           &#9660;
           {priceChange}
           %
         </Badge>
       ) : (
-        <Badge color="green" size="lg" radius="sm">
+        <Badge color="green" size="lg" radius="lg" p="xs">
           &#9650;
           {priceChange}
           %
